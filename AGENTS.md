@@ -1,5 +1,12 @@
 # Grid Protocol Quarto Template: Agent Instructions
 
+> **Current design (November 2026):** the deck no longer uses Grid Protocol. It follows the London talk
+> (`~/Desktop/talk_LONDON_NOVEMBER_2026`): plain Quarto revealjs, 1400 x 1000, styles in `custom.scss`,
+> cyanotype title / plan / part / closing slides built from `static_images/cyan_full.jpg`, citations in
+> `::: aside` as bare `@key`s, `{.dense}` on crowded bullet slides. The `gp-*` files below are kept but unused;
+> only the fonts (`gp-template/css/gp-fonts.css`) and the pop-up glue (`includes/after-body.html`) are still loaded.
+
+
 ## Role
 You are an implementation agent for this Quarto Reveal.js slide template.
 Your job is to produce/modify `index.qmd` (or similar `.qmd` slide files) so they match the Grid Protocol visual system and interaction behavior.
@@ -40,7 +47,7 @@ Use HTTP preview for shader slides. Do not rely on `file://`.
 into `export/ai4sci2026_steps.pdf` (one page per click; each pop-up gets its own page where it opens).
 `--mode slides` gives one page per slide, with each pop-up after the slide as it stands when the pop-up opens; `--no-render`, `--contact-sheet`
 and `--pages` skip the render, add a thumbnail overview, or keep the page PNGs. Needs Playwright and
-Chrome (or Playwright's Chromium), and a network connection for the web fonts.
+Chrome (or Playwright's Chromium). The template's Jost and Newsreader fonts are bundled locally.
 
 ## Global Behavior (What the System Auto-Does)
 Bridge behavior from `gp-quarto.js`:

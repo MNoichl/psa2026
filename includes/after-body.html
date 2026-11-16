@@ -1,4 +1,14 @@
 <script>
+// Parked slides (# Title {.parked}) are greyed-out leftovers: show them whole, without click steps.
+(function unstepParkedSlides(){
+    document.querySelectorAll('.reveal .slides section.parked .fragment').forEach((el) => {
+        el.classList.remove('fragment', 'visible', 'current-fragment');
+        el.removeAttribute('data-fragment-index');
+    });
+    if (window.Reveal && Reveal.isReady && Reveal.isReady()) Reveal.sync();
+})();
+</script>
+<script>
 (function waitForReveal(){
     if (!window.Reveal || !Reveal.on) return setTimeout(waitForReveal, 30);
 

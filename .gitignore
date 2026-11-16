@@ -14,6 +14,7 @@
 !/tools/
 !/tools/export_pdf.py
 !/_quarto.yml
+!/custom.scss
 !/gp-quarto.css
 !/gp-quarto.js
 !/gp-embed.css
@@ -30,6 +31,10 @@
 !/gp-template/css/
 !/gp-template/css/grid-protocol.css
 !/gp-template/css/gp-image-fx.css
+!/gp-template/css/gp-fonts.css
+!/gp-template/fonts/
+!/gp-template/fonts/*.woff2
+!/gp-template/fonts/*-OFL.txt
 !/gp-template/js/
 !/gp-template/js/grid-protocol.js
 !/gp-template/js/gp-paper-shaders-halftone.js
@@ -42,6 +47,11 @@
 !/_extensions/martinomagnifico/multimodal/multimodal.css
 !/_extensions/martinomagnifico/multimodal/multimodal.js
 
+# Cyanotype map for the title, plan, part and closing slides
+!/static_images/
+!/static_images/cyan_full.jpg
+!/static_images/social_card.jpg
+
 # Figures used by the deck (allowlist each file, e.g. !/images/figure.svg)
 !/images/
 !/images/stopped-clock.jpg
@@ -51,6 +61,8 @@
 !/images/pareto_run.html
 !/images/pareto_domains.png
 !/images/pareto_domains_run.png
+# Literature review pop-ups, copied in by hole_finding_review/scripts/12_slide_assets.py
+!/images/litreview_*
 
 # Rendered site (hosted)
 !/index.html
@@ -68,3 +80,5 @@
 *~
 
 /.quarto/
+
+**/*.quarto_ipynb

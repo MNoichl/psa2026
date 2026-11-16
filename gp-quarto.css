@@ -8,7 +8,7 @@
   --r-link-color-hover: var(--gp-ink);
   --r-controls-color: var(--gp-ink);
   --r-selection-background-color: rgba(150, 61, 44, 0.18);
-  --gp-footer-text: "NOICHL / AI 4 SCIENCE 2026 / MAINZ";
+  --gp-footer-text: "LISCIANDRA & NOICHL / MODEL TRANSFER";
 }
 
 .reveal .slide-menu-button,
@@ -534,4 +534,108 @@
   letter-spacing: 0.1em;
   text-align: left;
   text-transform: uppercase;
+}
+
+/* Talk-specific content; typography and list layout inherit the template. */
+.reveal .slides section.gp-title .gp-meta-grid--authors {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1240px;
+  gap: 64px;
+}
+
+.reveal .slides section.gp-title .gp-meta-grid--authors .gp-block p {
+  font-size: 36px;
+  line-height: 1.25;
+  max-width: none;
+}
+
+.reveal .slides section.gp-title .gp-meta-grid--authors .gp-affiliation {
+  display: block;
+  margin-top: 10px;
+  font-size: 28px;
+  color: var(--gp-ink2);
+}
+
+/* Widen only the longer prose slides enough to retain the template's type scale. */
+.reveal .slides section.gp-slide.gp-reading-measure > .gp-list {
+  max-width: 1240px;
+}
+
+/* Let the automatic two-column list use the existing full content area. */
+.reveal .slides section.gp-wide-columns > .gp-list.gp-auto-columns-list {
+  max-width: var(--gp-content-w);
+}
+
+/* The closing question needs two lines at the template's heading size. */
+.reveal .slides section.gp-long-heading > h1 {
+  max-width: 26ch;
+}
+
+/* Leave space above the citation band on the nested mRNA example. */
+.reveal .slides section.gp-bullets.gp-compact-gap > h1 + .gp-accent-bar + .gp-list {
+  margin-top: 80px !important;
+}
+
+.reveal .slides section.gp-gap-table table {
+  max-width: 1660px;
+  table-layout: fixed;
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.reveal .slides section.gp-gap-table table th {
+  font-size: 19px;
+}
+
+.reveal .slides section.gp-gap-table table th:first-child {
+  width: 13%;
+}
+
+.reveal .slides section.gp-gap-table table th:nth-child(2) {
+  width: 25%;
+}
+
+.reveal .slides section.gp-gap-table table th:nth-child(3) {
+  width: 27%;
+}
+
+.reveal .slides section.gp-gap-table table td {
+  vertical-align: top;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.reveal .slides section.gp-gap-table table td p,
+.reveal .slides section.gp-gap-table table th p {
+  margin: 0;
+  max-width: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.reveal .slides section.gp-gap-table col:nth-child(1) {
+  width: 13% !important;
+}
+
+.reveal .slides section.gp-gap-table col:nth-child(2) {
+  width: 25% !important;
+}
+
+.reveal .slides section.gp-gap-table col:nth-child(3) {
+  width: 27% !important;
+}
+
+.reveal .slides section.gp-gap-table col:nth-child(4) {
+  width: 35% !important;
+}
+
+.reveal .slides section.gp-gap-table .gp-table-note {
+  margin-top: 24px;
+  font-size: 27px;
+  max-width: 1660px;
+}
+
+.reveal .slides section.gp-gap-table .gp-table-note p {
+  font-size: inherit;
+  max-width: none;
 }

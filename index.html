@@ -6,20 +6,28 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-aa6116068bda62cf0d776f6eff35862e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.31">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
-  <title>Towards AI generated Philosophy through Autoformalization - AI4Humanities &amp; Social Sciences, Mainz</title>
+  <meta name="author" content="Chiara Lisciandra">
+  <meta name="author" content="Maximilian Noichl">
+  <title>From tracing model transfer to predicting it</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -31,7 +39,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -48,10 +55,8 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
-  <link rel="stylesheet" href="gp-template/css/grid-protocol.css">
-  <link rel="stylesheet" href="gp-template/css/gp-image-fx.css">
-  <link rel="stylesheet" href="gp-quarto.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c3263047230e1f72c8a4f3b6796e6ae0.css">
+  <link rel="stylesheet" href="gp-template/css/gp-fonts.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -144,9 +149,6 @@
       margin-right: 0; 
     }
   </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..800;1,300..800&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&amp;display=swap" rel="stylesheet">
   <style>
   .center-xy {
     margin: 0;
@@ -158,159 +160,384 @@
     max-height: none;
   }
   </style>
+  <meta name="description" content="Chiara Lisciandra and Maximilian Noichl, PSA 2026. Model transfer drives scientific creativity: can gap maps, knowledge graphs and AI predict it?">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="From tracing model transfer to predicting it">
+  <meta property="og:description" content="Chiara Lisciandra and Maximilian Noichl, PSA 2026. Model transfer drives scientific creativity: can gap maps, knowledge graphs and AI predict it?">
+  <meta property="og:url" content="https://mnoichl.github.io/psa2026/">
+  <meta property="og:image" content="https://mnoichl.github.io/psa2026/static_images/social_card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="Title slide: From tracing model transfer to predicting it, Chiara Lisciandra &amp; Maximilian Noichl, PSA 2026, on a cyanotype map of the sciences.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="From tracing model transfer to predicting it">
+  <meta name="twitter:description" content="Chiara Lisciandra and Maximilian Noichl, PSA 2026. Model transfer drives scientific creativity: can gap maps, knowledge graphs and AI predict it?">
+  <meta name="twitter:image" content="https://mnoichl.github.io/psa2026/static_images/social_card.jpg">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 
-<section id="towards-ai-generated-philosophy-through-autoformalization" class="slide level1" data-layout="title" data-gp-slug="AI Philosophy" data-gp-kicker="AI 4 Science 2026 / Mainz" data-gp-code="Towards AI generated Philosophy through Autoformalization" data-gp-section="">
-<h1>Towards AI generated Philosophy through Autoformalization</h1>
-<div class="gp-subtitle">
-<p>AI4Humanities &amp; Social Sciences</p>
-</div>
-<div class="gp-meta-grid">
-<div class="gp-block">
-<p><span class="gp-label">Author</span> Maximilian Noichl</p>
-</div>
-<div class="gp-block">
-<p><span class="gp-label">Affiliation</span> Utrecht University</p>
-</div>
-<div class="gp-block">
-<p><span class="gp-label">Venue &amp; date</span> AI 4 Science, Mainz<br>5 October 2026</p>
-</div>
+<section id="section" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
+<h1></h1>
+<div class="cyan-stage title-stage">
+  <div class="ground"></div>
+  <img src="static_images/cyan_full.jpg" style="width:1250px;left:520px;top:0px">
+  <div class="t-kicker" style="top:316px">PSA 2026</div>
+  <h1 class="t-title" style="top:358px">From tracing<br>model transfer<br>to predicting it</h1>
+  <div class="t-by" style="top:612px">Chiara Lisciandra &amp; Maximilian Noichl</div>
+  <div class="t-aff" style="top:680px">HHU Düsseldorf · Utrecht University</div>
 </div>
 </section>
-<section id="introduction" class="slide level1" data-gp-section="Introduction">
+
+<section id="introduction" class="title-slide slide level1 center">
 <h1>Introduction</h1>
 <ul>
-<li>Doctoral candidate at Utrecht University in theoretical philosophy.</li>
-<li>Data-driven philosophy, philosophy <em>with</em> AI, complex collective cognition, philosophy of science.</li>
-<li>To follow along: <a href="https://maxnoichl.eu/talk"><strong>maxnoichl.eu/talk</strong></a></li>
-<li><em>Towards AI generated Philosophy through Autoformalization</em></li>
-</ul>
-<!-- # Why would we want this? -->
-</section>
-<section id="why-would-we-want-this" class="slide level1">
-<h1>Why would we want this?</h1>
-<ul>
-<li>Better (AI-assisted) philosophy?</li>
-<li>Understand better how we do philosophy!</li>
-<li>Understanding the differences between AI-generated and human philosophy!
-<ul>
-<li>Alignment purposes?</li>
-</ul></li>
+<li class="fragment"><strong>Chiara Lisciandra</strong></li>
+<li class="fragment">…</li>
+<li class="fragment"><strong>Max Noichl</strong></li>
+<li class="fragment">…</li>
+<li class="fragment"><em>Thank you, INEM!</em></li>
 </ul>
 </section>
-<section id="how-do-we-get-good-ai-generated-philosophy" class="slide level1">
-<h1>How do we get <em>good</em> AI-generated philosophy?</h1>
+
+<section id="section-1" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
+<h1></h1>
+<div class="cyan-stage title-stage plan-stage">
+  <div class="ground"></div>
+  <img src="static_images/cyan_full.jpg" style="width:1250px;left:520px;top:0px">
+  <div class="t-kicker" style="top:352px">The plan</div>
+  <ol class="plan-list" style="top:400px">
+    <li class="fragment"><span class="num">I</span><span class="txt">Model transfer</span></li>
+    <li class="fragment"><span class="num">II</span><span class="txt">Modeling gaps in the literature</span></li>
+    <li class="fragment"><span class="num">III</span><span class="txt">Predicting model transfer?</span></li>
+  </ol>
+</div>
+</section>
+
+<section id="predicting-and-prescribing-model-transfer" class="title-slide slide level1 center">
+<h1>Predicting and prescribing model transfer</h1>
 <ul>
-<li>Out-of-the-box AI-generated philosophy tends to be <em>cliché/slop/repetitive</em>…</li>
-<li>AI tends to shine in “verifiable” domains (coding &amp; math), which provide signal for ‘hillclimbing’.</li>
-<li>How can we phrase philosophy that way?</li>
+<li class="fragment"><strong>Model transfer:</strong> applying a model built from one domain in another one.</li>
+<li class="fragment">A key component of scientific creativity, esp.&nbsp;around economics.
+<ul>
+<li class="fragment">Game theory to evolutionary biology, econophysics, …some more/better econ examples…</li>
+</ul></li>
+<li class="fragment">But how does it fare in our attempts to predict and prescribe?</li>
+<li class="fragment">New methods: gap maps, knowledge graphs, AI.</li>
 </ul>
 
-<!-- @lambertTulu3Pushing2024; @fitelsonStepsComputationalMetaphysics2007 -->
 <aside><div>
-<p><span class="citation" data-cites="kirkUnderstandingEffectsRLHF2024 guoDeepSeekR1IncentivizesReasoning2025 wuAutoformalizationLargeLanguage2022">(Kirk et al. 2024; Guo et al. 2025; Wu et al. 2022)</span></p>
+<p><span class="citation" data-cites="boumansHerfeld2022">Boumans and Herfeld (2022)</span> <span class="citation" data-cites="herfeldDoehne2025">Herfeld and Doehne (2025)</span> <span class="citation" data-cites="noichl2023">Noichl (2023)</span> <span class="citation" data-cites="noichl2021">Noichl (2021)</span> <span class="citation" data-cites="wang2023"><span class="nocase">Wang et al.</span> (2023)</span></p>
 </div></aside></section>
-<section id="philosophical-theories" class="slide level1 gp-dense" data-layout="half" data-gp-section="Knowledge">
-<h1>Philosophical theories</h1>
-<div class="gp-two-col gp-two-col--side-exhibit">
-<div class="gp-half-text">
-<p><strong>What is knowledge?</strong></p>
-<ul>
-<li>Let’s say: <strong>Knowledge = justified true belief (JTB).</strong>
-<ul>
-<li>As a formula: knows ⇔ true ∧ believes ∧ justified</li>
-</ul></li>
-<li>Gettier cases: something is wrong with justification alone.
-<ul>
-<li>Russell’s clock: true, believed &amp; justified → <em>knows</em>, but we disagree!</li>
-</ul></li>
-<li>How about: <strong>Knowledge = JTB + no false lemmas.</strong></li>
-<li>Philosophy, under this view: finding the simplest principles that match our conceptualizations.</li>
-</ul>
-</div>
-<div class="gp-side-exhibit" data-gp-with-item="2">
-<figure class="gp-figure">
-  <img src="images/stopped-clock.jpg" alt="Painting of a long-case clock in an empty, flooded room, with a bentwood chair and a paper boat">
-  <figcaption>Russell's stopped clock: true and justified, but not knowledge.</figcaption>
-</figure>
-</div>
-</div>
 
-<aside><div>
-<p><span class="citation" data-cites="russellHumanKnowledgeIts1948 gettierJustifiedTrueBelief1963 clarkKnowledgeGroundsComment1963">(Russell 1948; Gettier 1963; Clark 1963)</span></p>
-</div></aside></section>
-<section id="our-workflow" class="slide level1 gp-dense" data-gp-section="Workflow">
-<h1>Our workflow</h1>
-<ol type="1">
-<li>Research the philosophical landscape: theories &amp; desiderata (OpenAI Deep Research or Codex + database).</li>
-<li>Evaluate theories on desiderata using independent formalization (Z3). <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/heatmap.html" data-modal-navblock="true" data-pdf-click="Stopped clock">Heatmap</a></li>
-<li>But: “Monster-theories”!
-<ul>
-<li>Force a simplicity constraint.</li>
-</ul></li>
-<li>Pareto frontier: simpler theories that solve more problems. <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/pareto.html" data-modal-navblock="true" data-modal-pin="Traditional justified true belief">Pareto</a></li>
-<li>Run research flow against the criteria: come up with a theory (verbalized sampling), get feedback, revise. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/workflow_v4.png" data-modal-navblock="true">Workflow</a></li>
-<li>Optimize along the frontier. <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/pareto_run.html" data-modal-navblock="true" data-modal-pin="#6 Content-producing">Pareto run</a></li>
-</ol>
+<section id="section-2" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
+<h1></h1>
+<div class="cyan-stage">
+  <div class="ground"></div>
+  <img src="static_images/cyan_full.jpg" style="width:1450px;left:-213px;top:-355px">
+  <div class="kicker">Part I</div>
+  <div class="part-title">Gaps in the literature</div>
+</div>
+</section>
 
-<aside><div>
-<p><span class="citation" data-cites="zhangVerbalizedSamplingHow2026">(Zhang et al. 2026)</span>. All runs use a mix of OpenAI’s Astra 6.1 &amp; Sol 5.5</p>
-</div></aside></section>
-<section id="early-results" class="slide level1" data-gp-section="Results">
-<h1>Early results</h1>
+<section id="ai-assisted-literature-review" class="title-slide slide level1 center">
+<h1>AI-assisted literature review</h1>
 <ul>
-<li>For 10 domains (Knowledge, Scientific Explanation, Moral Responsibility, etc.): 26 of 95 literature theories are at the frontier (27% vs.&nbsp;19% under chance). <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/pareto_domains.png" data-modal-navblock="true">Domains</a></li>
-<li>Does it work?</li>
-<li>52 of 100 AI-proposals make it past the frontier. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/pareto_domains_run.png" data-modal-navblock="true">Domains run</a></li>
-<li>Some results are interesting, but we still get a lot of “cheating”; literature theories are under-optimized.</li>
+<li class="fragment">Keyword-based search in OpenAlex (6k hits).</li>
+<li class="fragment">Pare down with Astra 6.1 to 2k papers matching our criteria.</li>
+<li class="fragment">Add papers with at least 3 citations to or from the sample &amp; filter again.</li>
+<li class="fragment">Final sample: 2,501 papers. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/litreview_flow.svg" data-modal-navblock="true">Pipeline</a></li>
+<li class="fragment">Annotate for normativity and transparency. <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/litreview_prompts.html" data-modal-navblock="true">Prompts</a></li>
 </ul>
 </section>
-<section id="problems-future-work" class="slide level1" data-gp-section="Outlook">
-<h1>Problems &amp; future work</h1>
+
+<section id="results-of-the-literature-review" class="title-slide slide level1 center">
+<h1>Results of the literature review</h1>
 <ul>
-<li>Lack of “deep creativity” (dependent on landscape → counterexample mining)</li>
-<li>Evaluation is hard (but cf.&nbsp;PhilosophyBench; AI Philosophy Competition)</li>
-<li>No tieback to literature (novelty)</li>
-<li>Understanding our results? Back to essays?</li>
-<li><strong>Thank you!</strong></li>
+<li class="fragment">The literature, mapped by transparency and normativity. <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/litreview_map.html" data-modal-navblock="true">Map</a></li>
+<li class="fragment">Gap maps and (AI-based) network models are gaining popularity fast. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/litreview_timeline.png" data-modal-navblock="true">Over time</a></li>
+<li class="fragment">Normativity has been on the rise. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/litreview_norm_share.png" data-modal-navblock="true">Normativity</a></li>
+<li class="fragment">Opacity too, but only recently: opaque methods went from 9% (2023) to 21% (2025). <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/litreview_opacity_share.png" data-modal-navblock="true">Opacity</a></li>
+</ul>
+<!-- Parked slides: add .parked to a slide's heading to grey it out and mark it as not in the talk. -->
+</section>
+
+<section id="network-structure-and-scientific-discovery" class="title-slide slide level1 dense parked center">
+<h1>Network structure and scientific discovery</h1>
+<ul>
+<li class="fragment"><strong>Connect disparate literatures:</strong> combining existing knowledge can reveal previously unknown relationships.</li>
+<li class="fragment"><strong>Literature-based discovery:</strong> connect A and C through their shared relationship with B.</li>
+<li class="fragment"><strong>The mRNA example:</strong>
+<ul>
+<li class="fragment"><strong>A → B:</strong> an mRNA vaccine causes inflammatory reactions that prevent clinical use.</li>
+<li class="fragment"><strong>C suppresses B:</strong> another group finds mRNA modifications that suppress those reactions.</li>
+<li class="fragment"><strong>Connect A + C:</strong> modify the vaccine accordingly.</li>
+</ul></li>
+<li class="fragment">This connection helped enable mRNA vaccines later used against COVID-19.</li>
 </ul>
 
 <aside><div>
-<p><span class="citation" data-cites="philosophybench2026 goodsellAIPhilosophyCompetition2026">(PhilosophyBench 2026; Goodsell and Thornley 2026)</span></p>
+<p>Karikó (2023)</p>
 </div></aside></section>
-<section id="literature" class="slide level1 smaller scrollable" data-layout="references" data-gp-section="References">
-<h1>Literature</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-clarkKnowledgeGroundsComment1963" class="csl-entry" role="listitem">
-Clark, Michael. 1963. <span>“Knowledge and Grounds: A Comment on <span>Mr</span>. <span>Gettier</span>’s Paper.”</span> <em>Analysis</em> 24 (2): 46–48. <a href="https://doi.org/10.1093/analys/24.2.46">https://doi.org/10.1093/analys/24.2.46</a>.
+
+<section id="identifying-gaps-in-scientific-literature" class="title-slide slide level1 parked center">
+<h1>Identifying gaps in scientific literature</h1>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Approach</th>
+<th style="text-align: left;">Representation</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Gaps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Networks</strong></td>
+<td style="text-align: left;">Bibliometric networks</td>
+<td style="text-align: left;">Citations, references, collaborations</td>
+<td style="text-align: left;">Missing or weak connections; potential future links</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Networks</strong></td>
+<td style="text-align: left;">Semantic networks</td>
+<td style="text-align: left;">Topics, embeddings, extracted concepts</td>
+<td style="text-align: left;">Semantically related but weakly connected areas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Networks</strong></td>
+<td style="text-align: left;">Knowledge graphs</td>
+<td style="text-align: left;">Concepts and substantive relationships</td>
+<td style="text-align: left;">Missing concept or claim relationships; link prediction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Maps</strong></td>
+<td style="text-align: left;">Evidence maps / matrices</td>
+<td style="text-align: left;">Publications coded by predefined categories</td>
+<td style="text-align: left;">Empty or insufficiently populated cells</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LLMs</strong></td>
+<td style="text-align: left;">Literature represented in model parameters</td>
+<td style="text-align: left;">Publications, abstracts, descriptions of findings</td>
+<td style="text-align: left;">New ideas or hypotheses from recombining existing knowledge</td>
+</tr>
+</tbody>
+</table>
+<div class="table-note">
+<p><strong>Network approaches:</strong> identify what is not connected within a reconstructed literature.</p>
 </div>
-<div id="ref-gettierJustifiedTrueBelief1963" class="csl-entry" role="listitem">
-Gettier, Edmund L. 1963. <span>“Is Justified True Belief Knowledge?”</span> <em>Analysis</em> 23 (6): 121–23. <a href="https://doi.org/10.1093/analys/23.6.121">https://doi.org/10.1093/analys/23.6.121</a>.
+
+<aside><div>
+<p><span class="citation" data-cites="saranWhite2018">Saran and White (2018)</span> <span class="citation" data-cites="wang2023"><span class="nocase">Wang et al.</span> (2023)</span></p>
+</div></aside></section>
+
+<section id="section-3" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
+<h1></h1>
+<div class="cyan-stage">
+  <div class="ground"></div>
+  <img src="static_images/cyan_full.jpg" style="width:1800px;left:-434px;top:-562px">
+  <div class="kicker">Part II</div>
+  <div class="part-title">Three cases</div>
 </div>
-<div id="ref-goodsellAIPhilosophyCompetition2026" class="csl-entry" role="listitem">
-Goodsell, Zachary, and Elliott Thornley. 2026. <span>“<span>AI</span> Philosophy Competition: 1st Edition.”</span> September 1, 2026. <a href="https://www.zacharygoodsell.com/ai-philosophy-competition">https://www.zacharygoodsell.com/ai-philosophy-competition</a>.
+</section>
+
+<section id="networks-llms-for-classification" class="title-slide slide level1 dense center">
+<h1>Networks + LLMs for classification</h1>
+<ul>
+<li class="fragment"><strong>Thoma et al.:</strong> mapping behavioral reinforcement learning research.</li>
+<li class="fragment"><strong>Motivation:</strong> literature growth risks duplicated efforts and disconnected research communities.</li>
+<li class="fragment"><strong>Representation:</strong> cluster articles by authors, cited references, and LLM-based similarity of titles and abstracts.</li>
+<li class="fragment"><strong>Application:</strong> identify communities with overlapping interests but limited exchange.
+<ul>
+<li class="fragment">Similar topics + references → opportunities for new collaborations.</li>
+<li class="fragment">High semantic similarity + low reference similarity → opportunities to integrate disconnected literatures.</li>
+</ul></li>
+<li class="fragment"><strong>Model transfer:</strong> could this have predicted collaboration between psychology and behavioral economics before it began?</li>
+</ul>
+
+<aside class="notes">
+<p>Thoma et al., Mapping the landscape of behavioral reinforcement learning research (forthcoming).</p>
+<p>Motivation</p>
+<p>“With ever more academic articles being published each year [1–3], maintaining a comprehensive overview of a research field is becoming increasingly challenging. Overlooking relevant new work may result in duplicate efforts and inefficient resource allocation, while neglecting previous work may lead to an increasingly fragmented and siloed research landscape with diminished innovative potential.”</p>
+<p>Representation Articles form research clusters using 1) bibliometric data (co-occurrence of authors and references) to measure similarities in authors and cited references, and 2) LLMs applied to title and abstracts to measure content similarity</p>
+<p>Application Map behavioral reinforcement learning and identify research communities with overlapping interests but limited exchange. “Examining the connections between research countries [clusters] across the landscape serves two goals. On the one hand, it documents the status quo of scientific exchange. On the other hand, it can help to identify promising areas for further advancing scientific exchange (e.g., expanding collaboration networks or integrating knowledge bases). To this end, we examined similarity profiles between research countries; that is, how pairs of countries compare on each of the three similarity spaces (i.e., authors, references, and semantic content)</p>
+<p>First, consider the scenario where multiple groups of researchers investigate similar topics and refer to similar references: In this case, there may be a shared research interest, and fostering new collaborations beyond existing author networks may lead to more efficient resource allocation and avoid redundant efforts.</p>
+<p>A second pathway to identifying promising areas for scientific exchange addresses the risk of disconnected lines of literature. When two research countries exhibit high semantic similarity but low reference similarity, the scientific community may benefit from integrating the literature to establish a more comprehensive knowledge basis.”</p>
+<p>Model transfer: could cases of collaborations among research groups (e.g.&nbsp;“second wave” of collaboration between Psychology + Behavioral Economics) have been predicted by looking at the networks as in the study above, before they even started engaging with each other?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><span class="citation" data-cites="thoma2025">Thoma et al. (2025)</span>, forthcoming.</p>
+</div></aside></section>
+
+<section id="knowledge-graphs" class="title-slide slide level1 center">
+<h1>Knowledge graphs</h1>
+<ul>
+<li class="fragment"><strong>Garg and Fetzer:</strong> <em>Causal Claims in Economics</em>.</li>
+<li class="fragment"><strong>Representation:</strong> each paper becomes an evidence-annotated claim graph.
+<ul>
+<li class="fragment"><strong>Nodes:</strong> standardized economic concepts.</li>
+<li class="fragment"><strong>Directed edges:</strong> claimed relationships.</li>
+<li class="fragment"><strong>Annotations:</strong> the evidentiary basis of each relationship.</li>
+</ul></li>
+<li class="fragment"><strong>Application:</strong> reconstruct the credibility revolution; relate causal evidence, novelty, and argumentative structure to publication and citations.</li>
+<li class="fragment"><strong>Model transfer:</strong> can claim graphs distinguish a transferred explanatory structure from a new combination of topics?</li>
+</ul>
+
+<aside class="notes">
+<p>Garg and Fetzer, Causal Claims in Economics, February 2026 revision</p>
+<p>Representation Each paper is an evidence-annotated claim graph. Nodes: standardized economic concepts Directed edges: claimed relationships Annotations: the evidentiary basis of each relationship</p>
+<p>Application Reconstruct the credibility revolution in economics and examine how causal evidence, novelty, and argumentative structure relate to publication and citations. Model transfer Could claim graphs distinguish the transfer of an explanatory structure from a new combination of topics?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><span class="citation" data-cites="gargFetzer2025">Garg and Fetzer (2025)</span>, February 2026 revision.</p>
+</div></aside></section>
+
+<section id="knowledge-graphs-link-prediction" class="title-slide slide level1 center">
+<h1>Knowledge graphs + link prediction</h1>
+<ul>
+<li class="fragment"><strong>Gu and Krenn:</strong> forecasting high-impact research topics.</li>
+<li class="fragment"><strong>Representation:</strong> an evolving knowledge graph.
+<ul>
+<li class="fragment"><strong>Nodes:</strong> concepts extracted from titles and abstracts.</li>
+<li class="fragment"><strong>Edges:</strong> concepts jointly investigated in a paper.</li>
+<li class="fragment">Connections carry time and citation information.</li>
+</ul></li>
+<li class="fragment"><strong>Application:</strong> learn from historical network evolution to predict which unconnected concept pairs will accumulate citations.</li>
+<li class="fragment"><strong>Model transfer:</strong> could a model and a new target domain be an unconnected pair whose future connection is predicted to be influential?</li>
+</ul>
+
+<aside class="notes">
+<p>Gu and Krenn, Forecasting high-impact research topics via machine learning on evolving knowledge graphs, 2025 Representation An evolving knowledge graph combines: Nodes: concepts extracted from titles and abstracts Edges: concepts jointly investigated in a paper Time and citations associated with those connections Application Train machine-learning models on historical network evolution to predict which previously unconnected concept pairs will accumulate citations. Model transfer Could a model and a new target domain appear as an unconnected concept pair whose future connection is predicted to be influential?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><span class="citation" data-cites="guKrenn2025">Gu and Krenn (2025)</span></p>
+</div></aside></section>
+
+<section id="section-4" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
+<h1></h1>
+<div class="cyan-stage">
+  <div class="ground"></div>
+  <img src="static_images/cyan_full.jpg" style="width:2220px;left:-699px;top:-810px">
+  <div class="kicker">Part III</div>
+  <div class="part-title">Predicting model transfer?</div>
 </div>
-<div id="ref-guoDeepSeekR1IncentivizesReasoning2025" class="csl-entry" role="listitem">
-Guo, Daya, Dejian Yang, Haowei Zhang, Junxiao Song, Peiyi Wang, Qihao Zhu, et al. 2025. <span>“<span>DeepSeek-R1</span> Incentivizes Reasoning in <span>LLMs</span> Through Reinforcement Learning.”</span> <em>Nature</em> 645 (8081): 633–38. <a href="https://doi.org/10.1038/s41586-025-09422-z">https://doi.org/10.1038/s41586-025-09422-z</a>.
+</section>
+
+<section id="problems" class="title-slide slide level1 center">
+<h1>Problems</h1>
+<ul>
+<li class="fragment">Doesn’t capture model transfer?</li>
+<li class="fragment">Long range isn’t covered?</li>
+<li class="fragment">What would it take for this to capture model transfer?</li>
+<li class="fragment">Representation of formal stuff, math structure, phenomenology.</li>
+<li class="fragment">Worry: do you capture the tails of the distribution?</li>
+</ul>
+</section>
+
+<section id="when-does-a-predicted-connection-amount-to-model-transfer" class="title-slide slide level1 parked center">
+<h1>When does a predicted connection amount to model transfer?</h1>
+<ul>
+<li class="fragment">A missing connection can indicate a <strong>research opportunity</strong>. Promising model transfer requires more.</li>
+<li class="fragment"><strong>Template identity:</strong> what makes the transferred model recognizably the same template?</li>
+<li class="fragment"><strong>Applicability:</strong> why should its structure help address the target problem?</li>
+<li class="fragment"><strong>Epistemic value:</strong> what would make the application scientifically informative?</li>
+<li class="fragment"><strong>Can network methods capture these conditions—or mainly identify where to investigate them?</strong></li>
+</ul>
+<aside class="notes">
+<p>When does a predicted connection amount to model transfer? Questions for evaluating the relevance of network methods to model transfer</p>
+<p>A missing connection can indicate an opportunity for research. Identifying a promising model transfer requires more: What makes the transferred model recognizably the same template? Applicability: Why should its structure help address the target problem? Epistemic value What would make the application scientifically informative? Can network methods capture these conditions, or primarily identify where to investigate them?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-5" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
+<h1></h1>
+<div class="cyan-stage title-stage">
+  <div class="ground"></div>
+  <img src="static_images/cyan_full.jpg" style="width:1250px;left:520px;top:0px">
+  <div class="t-kicker" style="top:376px">PSA 2026</div>
+  <h1 class="t-title thanks" style="top:404px">Thank you</h1>
+  <div class="t-by" style="top:534px">Chiara Lisciandra &amp; Maximilian Noichl</div>
 </div>
-<div id="ref-kirkUnderstandingEffectsRLHF2024" class="csl-entry" role="listitem">
-Kirk, Robert, Ishita Mediratta, Christoforos Nalmpantis, Jelena Luketina, Eric Hambro, Edward Grefenstette, and Roberta Raileanu. 2024. <span>“Understanding the Effects of <span>RLHF</span> on <span>LLM</span> Generalisation and Diversity.”</span> In <em>International Conference on Learning Representations (<span>ICLR</span> 2024)</em>. <a href="https://arxiv.org/abs/2310.06452">https://arxiv.org/abs/2310.06452</a>.
+</section>
+
+<section id="references" class="title-slide slide level1 scrollable smaller">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-boumansHerfeld2022" class="csl-entry" role="listitem">
+Boumans, M., and C. Herfeld. 2022. <span>“Progress in Economics.”</span> In <em>New Philosophical Perspectives on Scientific Progress</em>. Routledge.
 </div>
-<div id="ref-philosophybench2026" class="csl-entry" role="listitem">
-PhilosophyBench. 2026. <span>“<span>PhilosophyBench</span>: <span>AI</span> and Philosophy Research at <span>Stanford</span>.”</span> September 2026. <a href="https://philosophybench.org/">https://philosophybench.org/</a>.
+<div id="ref-gargFetzer2025" class="csl-entry" role="listitem">
+Garg, P., and T. Fetzer. 2025. <em>Causal Claims in Economics</em>. <a href="https://arxiv.org/abs/2501.06873">https://arxiv.org/abs/2501.06873</a>.
 </div>
-<div id="ref-russellHumanKnowledgeIts1948" class="csl-entry" role="listitem">
-Russell, Bertrand. 1948. <em>Human Knowledge: Its Scope and Limits</em>. London: George Allen &amp; Unwin.
+<div id="ref-guKrenn2025" class="csl-entry" role="listitem">
+Gu, X., and M. Krenn. 2025. <span>“Forecasting High-Impact Research Topics via Machine Learning on Evolving Knowledge Graphs.”</span> <em>Machine Learning: Science and Technology</em> 6 (2): 025041.
 </div>
-<div id="ref-wuAutoformalizationLargeLanguage2022" class="csl-entry" role="listitem">
-Wu, Yuhuai, Albert Q. Jiang, Wenda Li, Markus N. Rabe, Charles Staats, Mateja Jamnik, and Christian Szegedy. 2022. <span>“Autoformalization with Large Language Models.”</span> In <em>Advances in Neural Information Processing Systems 35 (<span>NeurIPS</span> 2022)</em>. <a href="https://arxiv.org/abs/2205.12615">https://arxiv.org/abs/2205.12615</a>.
+<div id="ref-herfeldDoehne2025" class="csl-entry" role="listitem">
+Herfeld, C., and M. Doehne. 2025. <span>“Empirical Network Analysis as a Method in Philosophy of Science.”</span> In <em>Methods in the Philosophy of Science: A User’s Guide</em>.
 </div>
-<div id="ref-zhangVerbalizedSamplingHow2026" class="csl-entry" role="listitem">
-Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christopher D. Manning, and Weiyan Shi. 2026. <span>“Verbalized Sampling: How to Mitigate Mode Collapse and Unlock <span>LLM</span> Diversity.”</span> In <em>International Conference on Machine Learning (<span>ICML</span> 2026)</em>. <a href="https://arxiv.org/abs/2510.01171">https://arxiv.org/abs/2510.01171</a>.
+<div id="ref-noichl2021" class="csl-entry" role="listitem">
+Noichl, M. 2021. <span>“Modeling the Structure of Recent Philosophy.”</span> <em>Synthese</em> 198 (6): 5089–100.
+</div>
+<div id="ref-noichl2023" class="csl-entry" role="listitem">
+Noichl, M. 2023. <span>“How Localized Are Computational Templates? A Machine Learning Approach.”</span> <em>Synthese</em> 201 (3): 107.
+</div>
+<div id="ref-saranWhite2018" class="csl-entry" role="listitem">
+Saran, A., and H. White. 2018. <span>“Evidence and Gap Maps: A Comparison of Different Approaches.”</span> <em>Campbell Systematic Reviews</em> 14 (1): 1–38.
+</div>
+<div id="ref-thoma2025" class="csl-entry" role="listitem">
+Thoma, A., F. Bolenz, K. Tiede, et al. 2025. <span>“Mapping the Landscape of Behavioral Reinforcement Learning Research.”</span> Unpublished manuscript.
+</div>
+<div id="ref-wang2023" class="csl-entry" role="listitem">
+<span class="nocase">Wang, H. et al.</span> 2023. <span>“Scientific Discovery in the Age of Artificial Intelligence.”</span> <em>Nature</em> 620 (7972): 47–60.
 </div>
 </div>
 
@@ -351,11 +578,11 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -369,7 +596,7 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
         controlsBackArrows: 'faded',
 
         // Display a presentation progress bar
-        progress: false,
+        progress: true,
 
         // Display the page number of the current slide
         slideNumber: false,
@@ -413,7 +640,7 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
+        navigationMode: 'default',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
@@ -497,12 +724,12 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1920,
+        width: 1400,
 
-        height: 1080,
+        height: 1000,
 
         // Factor of the display size that should remain empty around the content
-        margin: 4.0e-2,
+        margin: 0.15,
 
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 0.2,
@@ -510,7 +737,7 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
         maxScale: 1.6,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -536,9 +763,16 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
         ]
       });
     </script>
-    <script src="gp-quarto.js?v=20261005c"></script>
-    <script src="gp-template/js/grid-protocol.js?v=20260212a"></script>
-    <script type="module" src="gp-template/js/gp-paper-shaders-halftone.js?v=20260212a"></script>
+    <script>
+    // Parked slides (# Title {.parked}) are greyed-out leftovers: show them whole, without click steps.
+    (function unstepParkedSlides(){
+        document.querySelectorAll('.reveal .slides section.parked .fragment').forEach((el) => {
+            el.classList.remove('fragment', 'visible', 'current-fragment');
+            el.removeAttribute('data-fragment-index');
+        });
+        if (window.Reveal && Reveal.isReady && Reveal.isReady()) Reveal.sync();
+    })();
+    </script>
     <script>
     (function waitForReveal(){
         if (!window.Reveal || !Reveal.on) return setTimeout(waitForReveal, 30);
@@ -751,13 +985,14 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
@@ -777,7 +1012,8 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -786,8 +1022,69 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -801,6 +1098,7 @@ Zhang, Jiayi, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz, Christoph
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;

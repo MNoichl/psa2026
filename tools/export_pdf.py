@@ -21,8 +21,7 @@ Usage, from the deck folder:
 
 Output goes to export/ (not tracked by git). Needs Python 3 with Playwright
 (`pip install playwright`) and pypdf, plus Google Chrome or Playwright's own
-Chromium; the overview and PNG pages need PyMuPDF. Google Fonts are fetched
-live, so run it online.
+Chromium; the overview and PNG pages need PyMuPDF. The deck bundles its Jost and Newsreader fonts locally.
 """
 
 from __future__ import annotations

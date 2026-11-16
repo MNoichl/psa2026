@@ -110,7 +110,7 @@
   function convertAsides(section) {
     const children = Array.from(section.children);
     children.forEach((child) => {
-      if (child.classList.contains("gp-note")) return;
+      if (child.classList.contains("gp-note") || child.classList.contains("notes")) return;
 
       if (child.tagName === "ASIDE") {
         addClass(child, "gp-cites");

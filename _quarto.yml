@@ -2,39 +2,43 @@ project:
   render:
     - index.qmd
 
+# Layout and look follow the London talk (talk_LONDON_NOVEMBER_2026): cream paper, Newsreader,
+# oxblood accents, and cyanotype title, plan, part and closing slides. Styles are in custom.scss.
 format:
   revealjs:
     title-slide: false
-    scroll: false
-    menu: false
-    hash: true
-    history: true
-    controls: false
-    progress: false
-    slide-number: false
-    controls-layout: edges
-    transition: none
-    background-transition: none
-    slide-level: 1
-    navigation-mode: linear
-    auto-stretch: false
-    incremental: false
-    width: 1920
-    height: 1080
-    margin: 0.04
-    min-scale: 0.2
-    max-scale: 1.6
     theme:
       - default
+      - custom.scss
     css:
-      - gp-template/css/grid-protocol.css
-      - gp-template/css/gp-image-fx.css
-      - gp-quarto.css
+      - gp-template/css/gp-fonts.css
+    navigation-mode: vertical
+    auto-stretch: false
+    incremental: true
+    controls: true
+    width: 1400
+    height: 1000
+    margin: 0.15
+    min-scale: 0.2
+    max-scale: 1.6
     include-in-header:
-      - includes/gp-head.html
       - includes/in-header.html
+      # Link previews (social card made from the title slide)
+      - text: |
+          <meta name="description" content="Chiara Lisciandra and Maximilian Noichl, PSA 2026. Model transfer drives scientific creativity: can gap maps, knowledge graphs and AI predict it?">
+          <meta property="og:type" content="website">
+          <meta property="og:title" content="From tracing model transfer to predicting it">
+          <meta property="og:description" content="Chiara Lisciandra and Maximilian Noichl, PSA 2026. Model transfer drives scientific creativity: can gap maps, knowledge graphs and AI predict it?">
+          <meta property="og:url" content="https://mnoichl.github.io/psa2026/">
+          <meta property="og:image" content="https://mnoichl.github.io/psa2026/static_images/social_card.jpg">
+          <meta property="og:image:width" content="1200">
+          <meta property="og:image:height" content="628">
+          <meta property="og:image:alt" content="Title slide: From tracing model transfer to predicting it, Chiara Lisciandra & Maximilian Noichl, PSA 2026, on a cyanotype map of the sciences.">
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:title" content="From tracing model transfer to predicting it">
+          <meta name="twitter:description" content="Chiara Lisciandra and Maximilian Noichl, PSA 2026. Model transfer drives scientific creativity: can gap maps, knowledge graphs and AI predict it?">
+          <meta name="twitter:image" content="https://mnoichl.github.io/psa2026/static_images/social_card.jpg">
     include-after-body:
-      - includes/gp-after-body.html
       - includes/after-body.html
     revealjs-plugins:
       - multimodal
