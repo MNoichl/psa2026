@@ -57,12 +57,12 @@ nocite: '@*'
 
 * **Model transfer:** applying a model built from one domain in another one.
 * A key component of scientific creativity, esp. around economics.
-  * Game theory to evolutionary biology, econophysics, ...some more/better econ examples...
-* But how does it fare in our attempts to predict and prescribe?
+  * Game theory to evolutionary biology, econophysics, TKTK ...some more/better econ examples...
+* But how does it fare in our attempts to predict and prescribe science?
 * New methods: gap maps, knowledge graphs, AI.
 
 ::: aside
-@boumansHerfeld2022 @herfeldDoehne2025 @noichl2023 @noichl2021 @wang2023
+@knuuttilaLoettgers2016 @knuuttilaLoettgers2023 @boumansHerfeld2022 @herfeldDoehne2025 @noichl2023 @noichl2021 @wang2023
 :::
 
 
