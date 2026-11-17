@@ -403,3 +403,39 @@ $t-left: 40px;
     font-size: 15px; line-height: 1; letter-spacing: .18em; text-transform: uppercase;
     color: #6e6a60;
 }
+
+
+/* Pop-ups (multimodal plugin): a framed exhibit on the deck's paper, square corners,
+   a strong ink rule as on the tables, and a flat offset shadow instead of a soft card.
+   The plugin ignores the radius/overlay options in _quarto.yml, so they are set here. */
+.multimodal {
+  --mm-overlaycolor: rgba(17, 14, 10, .58) !important;
+  background-color: rgba(17, 14, 10, .58) !important;
+}
+.multimodal .mm-max .mm-dialog {
+  border-radius: 0 !important;
+  border: 2px solid $body-color !important;
+  border-top: 7px solid $myaccent !important;   // the oxblood rule, as under the title-slide kicker
+  background: $body-bg !important;
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, .26) !important;
+}
+// Images and charts sit on a paper mat (the review figures are drawn on the same cream); embedded pages fill the frame.
+.multimodal[data-modal-type=image] .mm-dialog {
+  padding: 22px !important;
+}
+// Close button: a square ink key in the frame's corner, oxblood on hover.
+.multimodal .mm-close {
+  --close-stroke-color: #{$body-bg};
+  top: 0 !important;
+  right: 0 !important;
+  width: 38px !important;
+  height: 38px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: $body-color !important;
+}
+.multimodal .mm-close::before { display: none !important; }
+.multimodal .mm-close:hover,
+.multimodal .mm-close:focus-visible { background: $myaccent !important; }
+.multimodal .mm-close svg line { stroke-linecap: butt !important; stroke-width: 1.6 !important; }
+.multimodal .mm-close:focus { outline: none !important; }
