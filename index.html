@@ -196,8 +196,12 @@
 <ul>
 <li class="fragment"><strong>Chiara Lisciandra</strong></li>
 <li class="fragment">…</li>
-<li class="fragment"><strong>Max Noichl</strong></li>
-<li class="fragment">…</li>
+<li class="fragment"><strong>Max Noichl</strong>
+<ul>
+<li class="fragment">Doctoral candidate at Utrecht University in theoretical philosophy.</li>
+<li class="fragment">Data-driven philosophy, philosophy with AI, complex collective cognition, philosophy of science.</li>
+</ul></li>
+<li class="fragment">WIP!</li>
 <li class="fragment"><em>Thank you, INEM!</em></li>
 </ul>
 </section>
@@ -226,7 +230,7 @@
 </ul></li>
 <li class="fragment"><strong>Modeling science</strong> to predict and prescribe:
 <ul>
-<li class="fragment">Gap maps, literature based discovery, knowledge graphs, …</li>
+<li class="fragment">Gap maps, literature-based discovery, knowledge graphs, …</li>
 </ul></li>
 </ul>
 
@@ -247,7 +251,7 @@
 <section id="ai-assisted-literature-review" class="title-slide slide level1 center">
 <h1>AI-assisted literature review</h1>
 <ul>
-<li class="fragment">Keyword-based search in OpenAlex (6k hits)</li>
+<li class="fragment">Keyword-based search in OpenAlex (6k hits).</li>
 <li class="fragment">Pare down with Astra 6.1 to 2k papers matching our criteria.</li>
 <li class="fragment">Add papers with at least 3 citations to or from the sample &amp; filter again.</li>
 <li class="fragment">Final sample: 2,501 papers. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/litreview_flow.svg" data-modal-navblock="true">Pipeline</a></li>
@@ -366,26 +370,6 @@
 <li class="fragment"><strong>Model transfer:</strong> could this have predicted collaboration between psychology and behavioral economics before it began?</li>
 </ul>
 
-<aside class="notes">
-<p>Thoma et al., Mapping the landscape of behavioral reinforcement learning research (forthcoming).</p>
-<p>Motivation</p>
-<p>“With ever more academic articles being published each year [1–3], maintaining a comprehensive overview of a research field is becoming increasingly challenging. Overlooking relevant new work may result in duplicate efforts and inefficient resource allocation, while neglecting previous work may lead to an increasingly fragmented and siloed research landscape with diminished innovative potential.”</p>
-<p>Representation Articles form research clusters using 1) bibliometric data (co-occurrence of authors and references) to measure similarities in authors and cited references, and 2) LLMs applied to title and abstracts to measure content similarity</p>
-<p>Application Map behavioral reinforcement learning and identify research communities with overlapping interests but limited exchange. “Examining the connections between research countries [clusters] across the landscape serves two goals. On the one hand, it documents the status quo of scientific exchange. On the other hand, it can help to identify promising areas for further advancing scientific exchange (e.g., expanding collaboration networks or integrating knowledge bases). To this end, we examined similarity profiles between research countries; that is, how pairs of countries compare on each of the three similarity spaces (i.e., authors, references, and semantic content)</p>
-<p>First, consider the scenario where multiple groups of researchers investigate similar topics and refer to similar references: In this case, there may be a shared research interest, and fostering new collaborations beyond existing author networks may lead to more efficient resource allocation and avoid redundant efforts.</p>
-<p>A second pathway to identifying promising areas for scientific exchange addresses the risk of disconnected lines of literature. When two research countries exhibit high semantic similarity but low reference similarity, the scientific community may benefit from integrating the literature to establish a more comprehensive knowledge basis.”</p>
-<p>Model transfer: could cases of collaborations among research groups (e.g.&nbsp;“second wave” of collaboration between Psychology + Behavioral Economics) have been predicted by looking at the networks as in the study above, before they even started engaging with each other?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 <aside><div>
 <p><span class="citation" data-cites="thoma2025">Thoma et al. (2025)</span>, forthcoming.</p>
 </div></aside></section>
@@ -404,21 +388,6 @@
 <li class="fragment"><strong>Model transfer:</strong> can claim graphs distinguish a transferred explanatory structure from a new combination of topics?</li>
 </ul>
 
-<aside class="notes">
-<p>Garg and Fetzer, Causal Claims in Economics, February 2026 revision</p>
-<p>Representation Each paper is an evidence-annotated claim graph. Nodes: standardized economic concepts Directed edges: claimed relationships Annotations: the evidentiary basis of each relationship</p>
-<p>Application Reconstruct the credibility revolution in economics and examine how causal evidence, novelty, and argumentative structure relate to publication and citations. Model transfer Could claim graphs distinguish the transfer of an explanatory structure from a new combination of topics?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 <aside><div>
 <p><span class="citation" data-cites="gargFetzer2025">Garg and Fetzer (2025)</span>, February 2026 revision.</p>
 </div></aside></section>
@@ -437,19 +406,6 @@
 <li class="fragment"><strong>Model transfer:</strong> could a model and a new target domain be an unconnected pair whose future connection is predicted to be influential?</li>
 </ul>
 
-<aside class="notes">
-<p>Gu and Krenn, Forecasting high-impact research topics via machine learning on evolving knowledge graphs, 2025 Representation An evolving knowledge graph combines: Nodes: concepts extracted from titles and abstracts Edges: concepts jointly investigated in a paper Time and citations associated with those connections Application Train machine-learning models on historical network evolution to predict which previously unconnected concept pairs will accumulate citations. Model transfer Could a model and a new target domain appear as an unconnected concept pair whose future connection is predicted to be influential?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 <aside><div>
 <p><span class="citation" data-cites="guKrenn2025">Gu and Krenn (2025)</span></p>
 </div></aside></section>
@@ -464,14 +420,16 @@
 </div>
 </section>
 
-<section id="problems" class="title-slide slide level1 center">
-<h1>Problems</h1>
+<section id="some-worries-conclusion-tktk" class="title-slide slide level1 center">
+<h1>Some worries &amp; Conclusion TKTK</h1>
 <ul>
-<li class="fragment">Doesn’t capture model transfer?</li>
-<li class="fragment">Long range isn’t covered?</li>
-<li class="fragment">What would it take for this to capture model transfer?</li>
-<li class="fragment">Representation of formal stuff, math structure, phenomenology.</li>
-<li class="fragment">Worry: do you capture the tails of the distribution?</li>
+<li class="fragment">Can any of these techniques actually be expected to capture model transfer?
+<ul>
+<li class="fragment">Long-range transfer is hard to include?</li>
+<li class="fragment">MT is based on similar conceptual structure, but how is that representable by these techniques?</li>
+<li class="fragment">Successful MT might be rare?</li>
+</ul></li>
+<li class="fragment">New forms of representation might be needed – embeddings of mathematical structure, phenomenology, multimodality</li>
 </ul>
 </section>
 
@@ -484,20 +442,6 @@
 <li class="fragment"><strong>Epistemic value:</strong> what would make the application scientifically informative?</li>
 <li class="fragment"><strong>Can network methods capture these conditions—or mainly identify where to investigate them?</strong></li>
 </ul>
-<aside class="notes">
-<p>When does a predicted connection amount to model transfer? Questions for evaluating the relevance of network methods to model transfer</p>
-<p>A missing connection can indicate an opportunity for research. Identifying a promising model transfer requires more: What makes the transferred model recognizably the same template? Applicability: Why should its structure help address the target problem? Epistemic value What would make the application scientifically informative? Can network methods capture these conditions, or primarily identify where to investigate them?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 
 <section id="section-5" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">

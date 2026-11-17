@@ -30,12 +30,14 @@ nocite: '@*'
 * **Chiara Lisciandra**
 * ...
 * **Max Noichl**
-* ...
+  * Doctoral candidate at Utrecht University in theoretical philosophy.
+  * Data-driven philosophy, philosophy with AI, complex collective cognition, philosophy of science.
+* WIP!
 * *Thank you, INEM!*
 
 
 
- 
+
 # {.cyan-part background-color="#183a68"}
 
 ```{=html}
@@ -59,7 +61,7 @@ nocite: '@*'
 * A key component of scientific creativity, esp. around economics.
   * Game theory to evolutionary biology, econophysics, TKTK ...some more/better econ examples...
 * **Modeling science** to predict and prescribe:
-  * Gap maps, literature based discovery, knowledge graphs, ...
+  * Gap maps, literature-based discovery, knowledge graphs, ...
 
 ::: aside
 @knuuttilaLoettgers2016 @knuuttilaLoettgers2023 @boumansHerfeld2022 @herfeldDoehne2025 @noichl2023 @noichl2021 @wang2023
@@ -83,7 +85,7 @@ nocite: '@*'
 
 # AI-assisted literature review
 
-* Keyword-based search in OpenAlex (6k hits) 
+* Keyword-based search in OpenAlex (6k hits).
 * Pare down with Astra 6.1 to 2k papers matching our criteria.
 * Add papers with at least 3 citations to or from the sample & filter again.
 * Final sample: 2,501 papers. [Pipeline](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_flow.svg" data-modal-navblock="true"}
@@ -158,25 +160,7 @@ Karikó (2023)
 @thoma2025, forthcoming.
 :::
 
-::: notes
-Thoma et al., Mapping the landscape of behavioral reinforcement learning research (forthcoming).
 
-Motivation
-
-“With ever more academic articles being published each year [1–3], maintaining a comprehensive overview of a research field is becoming increasingly challenging. Overlooking relevant new work may result in duplicate efforts and inefficient resource allocation, while neglecting previous work may lead to an increasingly fragmented and siloed research landscape with diminished innovative potential.”
-
-Representation
-Articles form research clusters using 1) bibliometric data (co-occurrence of authors and references) to measure  similarities in authors and cited references, and 2) LLMs applied to title and abstracts to measure content similarity
-
-Application
-Map behavioral reinforcement learning and identify research communities with overlapping interests but limited exchange. “Examining the connections between research countries [clusters] across the landscape serves two goals. On the one hand, it documents the status quo of scientific exchange. On the other hand, it can help to identify promising areas for further advancing scientific exchange (e.g., expanding collaboration networks or integrating knowledge bases). To this end, we examined similarity profiles between research countries; that is, how pairs of countries compare on each of the three similarity spaces (i.e., authors, references, and semantic content)
-
-First, consider the scenario where multiple groups of researchers investigate similar topics and refer to similar references: In this case, there may be a shared research interest, and fostering new collaborations beyond existing author networks may lead to more efficient resource allocation and avoid redundant efforts.
-
-A second pathway to identifying promising areas for scientific exchange addresses the risk of disconnected lines of literature. When two research countries exhibit high semantic similarity but low reference similarity, the scientific community may benefit from integrating the literature to establish a more comprehensive knowledge basis.”
-
-Model transfer: could cases of collaborations among research groups (e.g. “second wave” of collaboration between Psychology + Behavioral Economics) have been predicted by looking at the networks as in the study above, before they even started engaging with each other?
-:::
 
 # Knowledge graphs
 
@@ -188,24 +172,11 @@ Model transfer: could cases of collaborations among research groups (e.g. “sec
 * **Application:** reconstruct the credibility revolution; relate causal evidence, novelty, and argumentative structure to publication and citations.
 * **Model transfer:** can claim graphs distinguish a transferred explanatory structure from a new combination of topics?
 
+
 ::: aside
 @gargFetzer2025, February 2026 revision.
 :::
 
-::: notes
-Garg and Fetzer, Causal Claims in Economics, February 2026 revision
-
-Representation
-Each paper is an evidence-annotated claim graph.
-Nodes: standardized economic concepts
-Directed edges: claimed relationships
-Annotations: the evidentiary basis of each relationship
-
-Application
-Reconstruct the credibility revolution in economics and examine how causal evidence, novelty, and argumentative structure relate to publication and citations.
-Model transfer
-Could claim graphs distinguish the transfer of an explanatory structure from a new combination of topics?
-:::
 
 # Knowledge graphs + link prediction
 
@@ -221,20 +192,6 @@ Could claim graphs distinguish the transfer of an explanatory structure from a n
 @guKrenn2025
 :::
 
-::: notes
-Gu and Krenn, Forecasting high-impact research topics via machine learning on evolving knowledge graphs, 2025
-Representation
-An evolving knowledge graph combines:
-Nodes: concepts extracted from titles and abstracts
-Edges: concepts jointly investigated in a paper
-Time and citations associated with those connections
-Application
-Train machine-learning models on historical network evolution to predict which previously unconnected concept pairs will accumulate citations.
-Model transfer
-Could a model and a new target domain appear as an unconnected concept pair whose future connection is predicted to be influential?
-:::
-
-
 
 # {.cyan-part background-color="#183a68"}
 
@@ -248,12 +205,12 @@ Could a model and a new target domain appear as an unconnected concept pair whos
 ```
 
 
-# Problems
-* Doesn't capture model transfer?
-* Long range isn't covered?
-* What would it take for this to capture model transfer?
-* Representation of formal stuff, math structure, phenomenology.
-* Worry: do you capture the tails of the distribution?
+# Some worries & Conclusion TKTK
+* Can any of these techniques actually be expected to capture model transfer?
+  * Long-range transfer is hard to include?
+  * MT is based on similar conceptual structure, but how is that representable by these techniques?
+  * Successful MT might be rare?
+* New forms of representation might be needed -- embeddings of mathematical structure, phenomenology, multimodality
 
 
 
@@ -265,19 +222,6 @@ Could a model and a new target domain appear as an unconnected concept pair whos
 * **Epistemic value:** what would make the application scientifically informative?
 * **Can network methods capture these conditions—or mainly identify where to investigate them?**
 
-::: notes
-When does a predicted connection amount to model transfer?
-Questions for evaluating the relevance of network methods to model transfer
-
-A missing connection can indicate an opportunity for research.
-Identifying a promising model transfer requires more:
-What makes the transferred model recognizably the same template?
-Applicability: Why should its structure help address the target problem?
-Epistemic value
-What would make the application scientifically informative?
-Can network methods capture these conditions,
-or primarily identify where to investigate them?
-:::
 
 # {.cyan-part background-color="#183a68"}
 
