@@ -153,7 +153,7 @@ Karikó (2023)
 * **Representation:** cluster articles by authors, cited references, and LLM-based similarity of titles and abstracts.
 * **Application:** identify communities with overlapping interests but limited exchange.
   * Similar topics + references → opportunities for new collaborations.
-  * High semantic similarity + low reference similarity → opportunities to integrate disconnected literatures.
+  * High semantic similarity + low reference similarity → opportunities to integrate disconnected literatures. [Fig. 4](#){.opens-modal data-modal-type="image" data-modal-url="images/case_thoma_fig4.png" data-modal-navblock="true"}
 * **Model transfer:** could this have predicted collaboration between psychology and behavioral economics before it began?
 
 ::: aside
@@ -181,7 +181,7 @@ Karikó (2023)
 # Knowledge graphs + link prediction
 
 * **Gu and Krenn:** forecasting high-impact research topics.
-* **Representation:** an evolving knowledge graph.
+* **Representation:** an evolving knowledge graph. [Fig. 1](#){.opens-modal data-modal-type="image" data-modal-url="images/case_guKrenn_fig1.png" data-modal-navblock="true"}
   * **Nodes:** concepts extracted from titles and abstracts.
   * **Edges:** concepts jointly investigated in a paper.
   * Connections carry time and citation information.

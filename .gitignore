@@ -64,6 +64,9 @@
 # Literature review pop-ups, copied in by hole_finding_review/scripts/12_slide_assets.py
 !/images/litreview_*
 
+# Figures from the case-study papers (see papers/, not tracked)
+!/images/case_*
+
 # Rendered site (hosted)
 !/index.html
 !/index_files/
