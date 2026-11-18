@@ -55,7 +55,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ab2c005520ce3e961053113fbedd82b0.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-63ab876a64035a0d89200d91b2fc4458.css">
   <link rel="stylesheet" href="gp-template/css/gp-fonts.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -194,14 +194,16 @@
 <section id="introduction" class="title-slide slide level1 center">
 <h1>Introduction</h1>
 <ul>
-<li class="fragment"><strong>Chiara Lisciandra</strong></li>
-<li class="fragment">…</li>
+<li class="fragment"><strong>Chiara Lisciandra</strong>
+<ul>
+<li class="fragment">Junior Professor, Department of Philosophy, Heinrich Heine University Düsseldorf.</li>
+<li class="fragment">Philosophy of science, philosophy of economics, social philosophy.</li>
+</ul></li>
 <li class="fragment"><strong>Max Noichl</strong>
 <ul>
 <li class="fragment">Doctoral candidate at Utrecht University in theoretical philosophy.</li>
 <li class="fragment">Data-driven philosophy, philosophy with AI, complex collective cognition, philosophy of science.</li>
 </ul></li>
-<li class="fragment">WIP!</li>
 <li class="fragment"><em>Thank you, INEM!</em></li>
 </ul>
 </section>
@@ -226,16 +228,16 @@
 <li class="fragment"><strong>Model transfer:</strong> applying a model built from one domain in another one.</li>
 <li class="fragment">A key component of scientific creativity, esp.&nbsp;around economics.
 <ul>
-<li class="fragment">Game theory to evolutionary biology, econophysics, TKTK …some more/better econ examples…</li>
+<li class="fragment">Game theory to evolutionary biology, Lotka–Volterra to Goodwin’s growth cycle, econophysics (Ising models), Schelling-style ABMs.</li>
 </ul></li>
-<li class="fragment"><strong>Modeling science</strong> to predict and prescribe:
+<li class="fragment"><strong>Modeling science</strong> to forecast and prescribe:
 <ul>
-<li class="fragment">Gap maps, literature-based discovery, knowledge graphs, …</li>
+<li class="fragment">Gap maps, literature-based discovery, knowledge graphs, and many more.</li>
 </ul></li>
 </ul>
 
 <aside><div>
-<p><span class="citation" data-cites="knuuttilaLoettgers2016">Knuuttila and Loettgers (2016)</span> <span class="citation" data-cites="knuuttilaLoettgers2023">Knuuttila and Loettgers (2023)</span> <span class="citation" data-cites="boumansHerfeld2022">Boumans and Herfeld (2022)</span> <span class="citation" data-cites="herfeldDoehne2025">Herfeld and Doehne (2025)</span> <span class="citation" data-cites="noichl2023">Noichl (2023)</span> <span class="citation" data-cites="noichl2021">Noichl (2021)</span> <span class="citation" data-cites="wang2023"><span class="nocase">Wang et al.</span> (2023)</span></p>
+<p><span class="citation" data-cites="knuuttilaLoettgers2016">Knuuttila and Loettgers (2016)</span> <span class="citation" data-cites="knuuttilaLoettgers2023">Knuuttila and Loettgers (2023)</span> <span class="citation" data-cites="boumansHerfeld2022">Boumans and Herfeld (2022)</span> <span class="citation" data-cites="herfeldDoehne2025">Herfeld and Doehne (2025)</span> <span class="citation" data-cites="noichl2023">Noichl (2023)</span> <span class="citation" data-cites="noichl2021">Noichl (2021)</span> <span class="citation" data-cites="saranWhite2018">Saran and White (2018)</span> <span class="citation" data-cites="kastrinHristovski2021">Kastrin and Hristovski (2021)</span> <span class="citation" data-cites="krenn2023">Krenn et al. (2023)</span> <span class="citation" data-cites="guKrenn2025">Gu and Krenn (2025)</span></p>
 </div></aside></section>
 
 <section id="section-2" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
@@ -251,11 +253,12 @@
 <section id="ai-assisted-literature-review" class="title-slide slide level1 center">
 <h1>AI-assisted literature review</h1>
 <ul>
-<li class="fragment">Keyword-based search in OpenAlex (6k hits).</li>
+<li class="fragment">How is science systematically forecasted and prescribed?</li>
+<li class="fragment">Keyword-based search in OpenAlex (6k hits). <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/litreview_keywords.html" data-modal-navblock="true">Keywords</a></li>
 <li class="fragment">Pare down with Astra 6.1 to 2k papers matching our criteria.</li>
 <li class="fragment">Add papers with at least 3 citations to or from the sample &amp; filter again.</li>
 <li class="fragment">Final sample: 2,501 papers. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/litreview_flow.svg" data-modal-navblock="true">Pipeline</a></li>
-<li class="fragment">Annotate for normativity and transparency. <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/litreview_prompts.html" data-modal-navblock="true">Prompts</a></li>
+<li class="fragment">Rate each paper against its batch on two 1–11 scales, transparent ↔︎ opaque and descriptive ↔︎ prescriptive, and code its method family.</li>
 </ul>
 </section>
 
@@ -361,10 +364,10 @@
 <ul>
 <li class="fragment"><strong>Thoma et al.:</strong> mapping behavioral reinforcement learning research.</li>
 <li class="fragment"><strong>Motivation:</strong> literature growth risks duplicated efforts and disconnected research communities.</li>
-<li class="fragment"><strong>Representation:</strong> cluster articles by authors, cited references, and LLM-based similarity of titles and abstracts.</li>
+<li class="fragment"><strong>Representation:</strong> integrate authors, cited references, and LLM-based text similarity into one measure.</li>
 <li class="fragment"><strong>Application:</strong> identify communities with overlapping interests but limited exchange.
 <ul>
-<li class="fragment">Similar topics + references → opportunities for new collaborations.</li>
+<li class="fragment">Similar topics + references + low author similarity → opportunities for new collaborations.</li>
 <li class="fragment">High semantic similarity + low reference similarity → opportunities to integrate disconnected literatures. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/case_thoma_fig4.png" data-modal-navblock="true">Fig. 4</a></li>
 </ul></li>
 <li class="fragment"><strong>Model transfer:</strong> could this have predicted collaboration between psychology and behavioral economics before it began?</li>
@@ -385,7 +388,7 @@
 <li class="fragment"><strong>Annotations:</strong> the evidentiary basis of each relationship.</li>
 </ul></li>
 <li class="fragment"><strong>Application:</strong> reconstruct the credibility revolution; relate causal evidence, novelty, and argumentative structure to publication and citations.</li>
-<li class="fragment"><strong>Model transfer:</strong> can claim graphs distinguish a transferred explanatory structure from a new combination of topics?</li>
+<li class="fragment"><strong>Model transfer:</strong> could claim graphs help identify instances of model transfer? What features would a knowledge graph need to capture it?</li>
 </ul>
 
 <aside><div>
@@ -407,7 +410,7 @@
 </ul>
 
 <aside><div>
-<p><span class="citation" data-cites="guKrenn2025">Gu and Krenn (2025)</span></p>
+<p><span class="citation" data-cites="guKrenn2025">Gu and Krenn (2025)</span> <span class="citation" data-cites="krenn2023">Krenn et al. (2023)</span></p>
 </div></aside></section>
 
 <section id="section-4" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
@@ -470,11 +473,17 @@ Gu, X., and M. Krenn. 2025. <span>“Forecasting High-Impact Research Topics via
 <div id="ref-herfeldDoehne2025" class="csl-entry" role="listitem">
 Herfeld, C., and M. Doehne. 2025. <span>“Empirical Network Analysis as a Method in Philosophy of Science.”</span> In <em>Methods in the Philosophy of Science: A User’s Guide</em>.
 </div>
+<div id="ref-kastrinHristovski2021" class="csl-entry" role="listitem">
+Kastrin, Andrej, and Dimitar Hristovski. 2021. <span>“Scientometric Analysis and Knowledge Mapping of Literature-Based Discovery (1986–2020).”</span> <em>Scientometrics</em> 126 (2): 1415–51. <a href="https://doi.org/10.1007/s11192-020-03811-z">https://doi.org/10.1007/s11192-020-03811-z</a>.
+</div>
 <div id="ref-knuuttilaLoettgers2016" class="csl-entry" role="listitem">
 Knuuttila, T., and A. Loettgers. 2016. <span>“Model Templates Within and Between Disciplines: From Magnets to Gases – and Socio-Economic Systems.”</span> <em>European Journal for Philosophy of Science</em> 6 (3): 377–400. <a href="https://doi.org/10.1007/s13194-016-0145-1">https://doi.org/10.1007/s13194-016-0145-1</a>.
 </div>
 <div id="ref-knuuttilaLoettgers2023" class="csl-entry" role="listitem">
 Knuuttila, T., and A. Loettgers. 2023. <span>“Model Templates: Transdisciplinary Application and Entanglement.”</span> <em>Synthese</em> 201 (6): 200. <a href="https://doi.org/10.1007/s11229-023-04178-3">https://doi.org/10.1007/s11229-023-04178-3</a>.
+</div>
+<div id="ref-krenn2023" class="csl-entry" role="listitem">
+Krenn, Mario, Lorenzo Buffoni, Bruno Coutinho, et al. 2023. <span>“Forecasting the Future of Artificial Intelligence with Machine Learning-Based Link Prediction in an Exponentially Growing Knowledge Network.”</span> <em>Nature Machine Intelligence</em> 5 (11): 1326–35. <a href="https://doi.org/10.1038/s42256-023-00735-0">https://doi.org/10.1038/s42256-023-00735-0</a>.
 </div>
 <div id="ref-noichl2021" class="csl-entry" role="listitem">
 Noichl, M. 2021. <span>“Modeling the Structure of Recent Philosophy.”</span> <em>Synthese</em> 198 (6): 5089–100.

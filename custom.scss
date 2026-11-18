@@ -405,19 +405,18 @@ $t-left: 40px;
 }
 
 
-/* Pop-ups (multimodal plugin): a framed exhibit on the deck's paper, square corners,
-   a strong ink rule as on the tables, and a flat offset shadow instead of a soft card.
-   The plugin ignores the radius/overlay options in _quarto.yml, so they are set here. */
+/* Pop-ups (multimodal plugin): a plain sheet of the deck's paper, square corners,
+   no rules and no shadow. The plugin ignores the radius/overlay options in
+   _quarto.yml, so they are set here. */
 .multimodal {
   --mm-overlaycolor: rgba(17, 14, 10, .58) !important;
   background-color: rgba(17, 14, 10, .58) !important;
 }
 .multimodal .mm-max .mm-dialog {
   border-radius: 0 !important;
-  border: 2px solid $body-color !important;
-  border-top: 7px solid $myaccent !important;   // the oxblood rule, as under the title-slide kicker
+  border: none !important;
   background: $body-bg !important;
-  box-shadow: 12px 12px 0 rgba(0, 0, 0, .26) !important;
+  box-shadow: none !important;
 }
 // Images and charts sit on a paper mat (the review figures are drawn on the same cream); embedded pages fill the frame.
 .multimodal[data-modal-type=image] .mm-dialog {
