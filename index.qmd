@@ -59,9 +59,9 @@ nocite: '@*'
 
 * **Model transfer:** applying a model built from one domain in another one.
 * A key component of scientific creativity, esp. around economics.
-  * Game theory to evolutionary biology, Lotka–Volterra to Goodwin's growth cycle, econophysics (e. g. Ising models), Schelling-style ABMs.
-* **Finding gaps in Science** to predict and prescribe:
-  * Gap maps, literature-based discovery, knowledge graphs, and many more.
+  * Game theory to evolutionary biology, Lotka–Volterra to Goodwin's growth cycle, econophysics (e.g. Ising models), Schelling-style ABMs.
+* **Finding gaps in science** to predict and prescribe:
+  * []{.gdot style="--c:#2f7fb5"}Gap maps, []{.gdot style="--c:#963d2c"}literature-based discovery, []{.gdot style="--c:#40a070"}knowledge graphs, and many more.
 
 ::: aside
 @knuuttilaLoettgers2016 @knuuttilaLoettgers2023 @boumansHerfeld2022 @herfeldDoehne2025 @noichl2023 @noichl2021 @saranWhite2018 @kastrinHristovski2021 @krenn2023 @guKrenn2025
@@ -87,9 +87,9 @@ nocite: '@*'
 
 * How is science systematically predicted and prescribed?
 * Keyword-based search in OpenAlex (6k hits). [Keywords](#){.opens-modal data-modal-type="iframe" data-modal-url="images/litreview_keywords.html" data-modal-navblock="true"}
-* Pare down with Astra 6.1 to 2k papers matching our criteria.
+* Pare down with Astra 6.1 to 2k papers matching our criteria. [Pipeline](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_flow.svg" data-modal-navblock="true"}
 * Add papers with at least 3 citations to or from the sample & filter again.
-* Final sample: 2,501 papers. [Pipeline](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_flow.svg" data-modal-navblock="true"}
+* Final sample: 2,501 papers.
 * Rate each paper against its batch on two 1–11 scales, transparent ↔ opaque and descriptive ↔ prescriptive, and code its method family.
 
 
@@ -189,7 +189,7 @@ Karikó (2023)
 * **Representation:** an evolving semantic network of AI. [Fig. 2](#){.opens-modal data-modal-type="image" data-modal-url="images/case_krenn2023_fig2.png" data-modal-navblock="true"}
   * **Nodes:** 64,000 concepts extracted from 143,000 AI and ML papers on arXiv.
   * **Edges:** concepts that co-occur in a title or abstract, dated by year.
-* **Application:** try to predic which unconnected concept pairs will be studied together within a few years.
+* **Application:** try to predict which unconnected concept pairs will be studied together within a few years.
 * Main predictive signal? How connected concepts already are.
 * **Model transfer:** could a model and a new target domain be an unconnected pair whose future connection is predicted?
 

@@ -8,8 +8,9 @@
     if (window.Reveal && Reveal.isReady && Reveal.isReady()) Reveal.sync();
 })();
 
-// Several pop-up buttons on one point: the first opens with the point, each further
-// one becomes a click step of its own, right after the point.
+// Pop-up buttons on a point: the point appears on one click, each of its buttons opens
+// its pop-up on a click of its own after that. The buttons are shown with the point
+// (custom.scss), only the opening waits.
 (function stepExtraButtons(){
     if (!window.Reveal || !Reveal.isReady || !Reveal.isReady()) return setTimeout(stepExtraButtons, 30);
     const slides = new Set();
@@ -17,7 +18,7 @@
         if (point.classList.contains('opens-modal')) return;
         const own = Array.from(point.querySelectorAll('.opens-modal'))
             .filter((b) => b.parentElement.closest('.fragment') === point);
-        own.slice(1).forEach((b) => {
+        own.forEach((b) => {
             if (b.classList.contains('fragment')) return;
             b.classList.add('fragment');
             slides.add(point.closest('section'));

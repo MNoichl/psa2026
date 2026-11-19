@@ -372,6 +372,19 @@ $t-left: 40px;
 }
 
 
+/* Group dots: a small dot before a method's name, in the colour the group has on the
+   literature-review map and charts, as in the map's legend.
+   Usage: []{.gdot style="--c:#2f7fb5"}Gap maps */
+.reveal .gdot {
+    display: inline-block;
+    width: .3em;
+    height: .3em;
+    margin-right: .22em;
+    border-radius: 50%;
+    background: var(--c, currentColor);
+    vertical-align: .16em;
+}
+
 /* Pop-up buttons at the end of a bullet ([Map](#){.opens-modal ...}) */
 .reveal a.opens-modal {
     display: inline-block;
@@ -385,6 +398,12 @@ $t-left: 40px;
     white-space: nowrap;
 }
 .reveal a.opens-modal:hover { background: $myaccent; color: $body-bg; }
+// Each button is a click step of its own (includes/after-body.html) so that its pop-up
+// opens one click after the point; keep the button itself visible with its point.
+.reveal .slides section .fragment a.opens-modal.fragment:not(.visible) {
+    opacity: 1;
+    visibility: inherit;
+}
 
 /* Parked slides: material kept in the deck but not in the talk. Add .parked to the
    slide's heading (# Title {.parked}). The slide is greyed out and tagged; its bullets
