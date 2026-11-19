@@ -168,7 +168,7 @@ Karikó (2023)
 
 
 
-# Knowledge graphs
+# Claim graphs
 
 * **Garg and Fetzer:** *Causal Claims in Economics*.
 * **Representation:** each paper becomes a claim graph.
@@ -187,10 +187,10 @@ Karikó (2023)
 # Knowledge graphs + link prediction
 
 * **Krenn et al.:** forecasting the future of AI research.
-* **Representation:** an evolving semantic network of AI. [Fig. 2](#){.opens-modal data-modal-type="image" data-modal-url="images/case_krenn2023_fig2.png" data-modal-navblock="true"}
+* **Representation:** an evolving semantic network of AI. 
   * **Nodes:** 64,000 concepts extracted from 143,000 AI and ML papers on arXiv.
   * **Edges:** concepts that co-occur in a title or abstract, dated by year.
-* **Application:** try to predict which unconnected concept pairs will be studied together within a few years.
+* **Application:** try to predict which unconnected concept pairs will be studied together within a few years. [Fig. 2](#){.opens-modal data-modal-type="image" data-modal-url="images/case_krenn2023_fig2.png" data-modal-navblock="true"}
 * Main predictive signal? How connected concepts already are.
 * **Model transfer:** could a model and a new target domain be an unconnected pair whose future connection is predicted?
 
