@@ -46,8 +46,8 @@ nocite: '@*'
   <img src="static_images/cyan_full.jpg" style="width:1250px;left:520px;top:0px">
   <div class="t-kicker" style="top:352px">The plan</div>
   <ol class="plan-list" style="top:400px">
-    <li class="fragment"><span class="num">I</span><span class="txt">Model transfer</span></li>
-    <li class="fragment"><span class="num">II</span><span class="txt">Modeling gaps in the literature</span></li>
+    <li class="fragment"><span class="num">I</span><span class="txt">Modeling gaps in the literature</span></li>
+    <li class="fragment"><span class="num">II</span><span class="txt">Gap-finding methods</span></li>
     <li class="fragment"><span class="num">III</span><span class="txt">Predicting model transfer?</span></li>
   </ol>
 </div>
@@ -59,8 +59,8 @@ nocite: '@*'
 
 * **Model transfer:** applying a model built from one domain in another one.
 * A key component of scientific creativity, esp. around economics.
-  * Game theory to evolutionary biology, Lotka–Volterra to Goodwin's growth cycle, econophysics (Ising models), Schelling-style ABMs.
-* **Modeling science** to forecast and prescribe:
+  * Game theory to evolutionary biology, Lotka–Volterra to Goodwin's growth cycle, econophysics (e. g. Ising models), Schelling-style ABMs.
+* **Finding gaps in Science** to predict and prescribe:
   * Gap maps, literature-based discovery, knowledge graphs, and many more.
 
 ::: aside
@@ -77,7 +77,7 @@ nocite: '@*'
   <div class="ground"></div>
   <img src="static_images/cyan_full.jpg" style="width:1450px;left:-213px;top:-355px">
   <div class="kicker">Part I</div>
-  <div class="part-title">Gaps in the literature</div>
+  <div class="part-title">Modeling gaps in the literature</div>
 </div>
 ```
 
@@ -85,7 +85,7 @@ nocite: '@*'
 
 # AI-assisted literature review
 
-* How is science systematically forecasted and prescribed?
+* How is science systematically predicted and prescribed?
 * Keyword-based search in OpenAlex (6k hits). [Keywords](#){.opens-modal data-modal-type="iframe" data-modal-url="images/litreview_keywords.html" data-modal-navblock="true"}
 * Pare down with Astra 6.1 to 2k papers matching our criteria.
 * Add papers with at least 3 citations to or from the sample & filter again.
@@ -144,7 +144,7 @@ Karikó (2023)
   <div class="ground"></div>
   <img src="static_images/cyan_full.jpg" style="width:1800px;left:-434px;top:-562px">
   <div class="kicker">Part II</div>
-  <div class="part-title">Three cases</div>
+  <div class="part-title">Gap-finding methods</div>
 </div>
 ```
 
@@ -158,6 +158,8 @@ Karikó (2023)
   * Similar topics + references + low author similarity → opportunities for new collaborations.
   * High semantic similarity + low reference similarity → opportunities to integrate disconnected literatures. [Fig. 4](#){.opens-modal data-modal-type="image" data-modal-url="images/case_thoma_fig4.png" data-modal-navblock="true"}
 * **Model transfer:** could this have predicted collaboration between psychology and behavioral economics before it began?
+
+
 
 ::: aside
 @thoma2025, forthcoming.
@@ -183,16 +185,16 @@ Karikó (2023)
 
 # Knowledge graphs + link prediction
 
-* **Gu and Krenn:** forecasting high-impact research topics.
-* **Representation:** an evolving knowledge graph. [Fig. 1](#){.opens-modal data-modal-type="image" data-modal-url="images/case_guKrenn_fig1.png" data-modal-navblock="true"}
-  * **Nodes:** concepts extracted from titles and abstracts.
-  * **Edges:** concepts jointly investigated in a paper.
-  * Connections carry time and citation information.
-* **Application:** learn from historical network evolution to predict which unconnected concept pairs will accumulate citations.
-* **Model transfer:** could a model and a new target domain be an unconnected pair whose future connection is predicted to be influential?
+* **Krenn et al.:** forecasting the future of AI research.
+* **Representation:** an evolving semantic network of AI. [Fig. 2](#){.opens-modal data-modal-type="image" data-modal-url="images/case_krenn2023_fig2.png" data-modal-navblock="true"}
+  * **Nodes:** 64,000 concepts extracted from 143,000 AI and ML papers on arXiv.
+  * **Edges:** concepts that co-occur in a title or abstract, dated by year.
+* **Application:** try to predic which unconnected concept pairs will be studied together within a few years.
+* Main predictive signal? How connected concepts already are.
+* **Model transfer:** could a model and a new target domain be an unconnected pair whose future connection is predicted?
 
 ::: aside
-@guKrenn2025 @krenn2023
+@krenn2023
 :::
 
 
@@ -208,12 +210,12 @@ Karikó (2023)
 ```
 
 
-# Some worries & Conclusion TKTK
+# Some worries & Conclusion
 * Can any of these techniques actually be expected to capture model transfer?
-  * Long-range transfer is hard to include?
+  * Long-range transfer is hard to capture?
   * MT is based on similar conceptual structure, but how is that representable by these techniques?
   * Successful MT might be rare?
-* New forms of representation might be needed -- embeddings of mathematical structure, phenomenology, multimodality
+* New forms of representation might be needed -- embeddings of mathematical structure?
 
 
 

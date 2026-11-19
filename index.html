@@ -215,8 +215,8 @@
   <img src="static_images/cyan_full.jpg" style="width:1250px;left:520px;top:0px">
   <div class="t-kicker" style="top:352px">The plan</div>
   <ol class="plan-list" style="top:400px">
-    <li class="fragment"><span class="num">I</span><span class="txt">Model transfer</span></li>
-    <li class="fragment"><span class="num">II</span><span class="txt">Modeling gaps in the literature</span></li>
+    <li class="fragment"><span class="num">I</span><span class="txt">Modeling gaps in the literature</span></li>
+    <li class="fragment"><span class="num">II</span><span class="txt">Gap-finding methods</span></li>
     <li class="fragment"><span class="num">III</span><span class="txt">Predicting model transfer?</span></li>
   </ol>
 </div>
@@ -228,9 +228,9 @@
 <li class="fragment"><strong>Model transfer:</strong> applying a model built from one domain in another one.</li>
 <li class="fragment">A key component of scientific creativity, esp.&nbsp;around economics.
 <ul>
-<li class="fragment">Game theory to evolutionary biology, Lotka–Volterra to Goodwin’s growth cycle, econophysics (Ising models), Schelling-style ABMs.</li>
+<li class="fragment">Game theory to evolutionary biology, Lotka–Volterra to Goodwin’s growth cycle, econophysics (e. g. Ising models), Schelling-style ABMs.</li>
 </ul></li>
-<li class="fragment"><strong>Modeling science</strong> to forecast and prescribe:
+<li class="fragment"><strong>Finding gaps in Science</strong> to predict and prescribe:
 <ul>
 <li class="fragment">Gap maps, literature-based discovery, knowledge graphs, and many more.</li>
 </ul></li>
@@ -246,14 +246,14 @@
   <div class="ground"></div>
   <img src="static_images/cyan_full.jpg" style="width:1450px;left:-213px;top:-355px">
   <div class="kicker">Part I</div>
-  <div class="part-title">Gaps in the literature</div>
+  <div class="part-title">Modeling gaps in the literature</div>
 </div>
 </section>
 
 <section id="ai-assisted-literature-review" class="title-slide slide level1 center">
 <h1>AI-assisted literature review</h1>
 <ul>
-<li class="fragment">How is science systematically forecasted and prescribed?</li>
+<li class="fragment">How is science systematically predicted and prescribed?</li>
 <li class="fragment">Keyword-based search in OpenAlex (6k hits). <a href="#/" class="opens-modal" data-modal-type="iframe" data-modal-url="images/litreview_keywords.html" data-modal-navblock="true">Keywords</a></li>
 <li class="fragment">Pare down with Astra 6.1 to 2k papers matching our criteria.</li>
 <li class="fragment">Add papers with at least 3 citations to or from the sample &amp; filter again.</li>
@@ -312,7 +312,7 @@ Karikó (2023)
   <div class="ground"></div>
   <img src="static_images/cyan_full.jpg" style="width:1800px;left:-434px;top:-562px">
   <div class="kicker">Part II</div>
-  <div class="part-title">Three cases</div>
+  <div class="part-title">Gap-finding methods</div>
 </div>
 </section>
 
@@ -355,19 +355,19 @@ Karikó (2023)
 <section id="knowledge-graphs-link-prediction" class="title-slide slide level1 center">
 <h1>Knowledge graphs + link prediction</h1>
 <ul>
-<li class="fragment"><strong>Gu and Krenn:</strong> forecasting high-impact research topics.</li>
-<li class="fragment"><strong>Representation:</strong> an evolving knowledge graph. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/case_guKrenn_fig1.png" data-modal-navblock="true">Fig. 1</a>
+<li class="fragment"><strong>Krenn et al.:</strong> forecasting the future of AI research.</li>
+<li class="fragment"><strong>Representation:</strong> an evolving semantic network of AI. <a href="#/" class="opens-modal" data-modal-type="image" data-modal-url="images/case_krenn2023_fig2.png" data-modal-navblock="true">Fig. 2</a>
 <ul>
-<li class="fragment"><strong>Nodes:</strong> concepts extracted from titles and abstracts.</li>
-<li class="fragment"><strong>Edges:</strong> concepts jointly investigated in a paper.</li>
-<li class="fragment">Connections carry time and citation information.</li>
+<li class="fragment"><strong>Nodes:</strong> 64,000 concepts extracted from 143,000 AI and ML papers on arXiv.</li>
+<li class="fragment"><strong>Edges:</strong> concepts that co-occur in a title or abstract, dated by year.</li>
 </ul></li>
-<li class="fragment"><strong>Application:</strong> learn from historical network evolution to predict which unconnected concept pairs will accumulate citations.</li>
-<li class="fragment"><strong>Model transfer:</strong> could a model and a new target domain be an unconnected pair whose future connection is predicted to be influential?</li>
+<li class="fragment"><strong>Application:</strong> try to predic which unconnected concept pairs will be studied together within a few years.</li>
+<li class="fragment">Main predictive signal? How connected concepts already are.</li>
+<li class="fragment"><strong>Model transfer:</strong> could a model and a new target domain be an unconnected pair whose future connection is predicted?</li>
 </ul>
 
 <aside><div>
-<p><span class="citation" data-cites="guKrenn2025">Gu and Krenn (2025)</span> <span class="citation" data-cites="krenn2023">Krenn et al. (2023)</span></p>
+<p><span class="citation" data-cites="krenn2023">Krenn et al. (2023)</span></p>
 </div></aside></section>
 
 <section id="section-4" class="title-slide slide level1 cyan-part center" data-background-color="#183a68">
@@ -380,16 +380,16 @@ Karikó (2023)
 </div>
 </section>
 
-<section id="some-worries-conclusion-tktk" class="title-slide slide level1 center">
-<h1>Some worries &amp; Conclusion TKTK</h1>
+<section id="some-worries-conclusion" class="title-slide slide level1 center">
+<h1>Some worries &amp; Conclusion</h1>
 <ul>
 <li class="fragment">Can any of these techniques actually be expected to capture model transfer?
 <ul>
-<li class="fragment">Long-range transfer is hard to include?</li>
+<li class="fragment">Long-range transfer is hard to capture?</li>
 <li class="fragment">MT is based on similar conceptual structure, but how is that representable by these techniques?</li>
 <li class="fragment">Successful MT might be rare?</li>
 </ul></li>
-<li class="fragment">New forms of representation might be needed – embeddings of mathematical structure, phenomenology, multimodality</li>
+<li class="fragment">New forms of representation might be needed – embeddings of mathematical structure?</li>
 </ul>
 <!-- PARKED, commented out (remove the comment markers to bring it back):
 # When does a predicted connection amount to model transfer? {.parked}
