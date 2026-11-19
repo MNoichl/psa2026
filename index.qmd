@@ -96,12 +96,13 @@ nocite: '@*'
 # Results of the literature review
 
 * Approaches to science-prediction, mapped by transparency and normativity. [Map](#){.opens-modal data-modal-type="iframe" data-modal-url="images/litreview_map.html" data-modal-navblock="true"}
-* Gap maps and (AI-based) network models are gaining popularity fast. [Over time](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_timeline.png" data-modal-navblock="true"}
+* Gap maps and (AI-based) network models are gaining popularity fast. [Over time](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_timeline.png" data-modal-navblock="true"} [Shares](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_group_share.png" data-modal-navblock="true"}
 * Opacity has been shifting... [Opacity](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_opacity_share.png" data-modal-navblock="true"}
 * Normativity has been on the rise! [Normativity](#){.opens-modal data-modal-type="image" data-modal-url="images/litreview_norm_share.png" data-modal-navblock="true"}
 
-<!-- Parked slides: add .parked to a slide's heading to grey it out and mark it as not in the talk. -->
+<!-- Parked slides: either add .parked to a slide's heading to show it greyed out, or wrap the slide in an HTML comment to leave it out entirely. -->
 
+<!-- PARKED, commented out (remove the comment markers to bring it back):
 # Network structure and scientific discovery {.dense .parked}
 
 * **Connect disparate literatures:** combining existing knowledge can reveal previously unknown relationships.
@@ -133,6 +134,7 @@ Karikó (2023)
 ::: aside
 @saranWhite2018 @wang2023
 :::
+-->
 
 
 # {.cyan-part background-color="#183a68"}
@@ -166,11 +168,11 @@ Karikó (2023)
 # Knowledge graphs
 
 * **Garg and Fetzer:** *Causal Claims in Economics*.
-* **Representation:** each paper becomes an evidence-annotated claim graph.
+* **Representation:** each paper becomes a claim graph.
   * **Nodes:** standardized economic concepts.
   * **Directed edges:** claimed relationships.
   * **Annotations:** the evidentiary basis of each relationship.
-* **Application:** reconstruct the credibility revolution; relate causal evidence, novelty, and argumentative structure to publication and citations.
+* **Application:** reconstruct the credibility revolution. Relate causal evidence, novelty, and argumentative structure to publication and citations.
 * **Model transfer:** could claim graphs help identify instances of model transfer? What features would a knowledge graph need to capture it?
 
 
@@ -215,6 +217,7 @@ Karikó (2023)
 
 
 
+<!-- PARKED, commented out (remove the comment markers to bring it back):
 # When does a predicted connection amount to model transfer? {.parked}
 
 * A missing connection can indicate a **research opportunity**. Promising model transfer requires more.
@@ -222,6 +225,7 @@ Karikó (2023)
 * **Applicability:** why should its structure help address the target problem?
 * **Epistemic value:** what would make the application scientifically informative?
 * **Can network methods capture these conditions—or mainly identify where to investigate them?**
+-->
 
 
 # {.cyan-part background-color="#183a68"}

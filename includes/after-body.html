@@ -7,6 +7,26 @@
     });
     if (window.Reveal && Reveal.isReady && Reveal.isReady()) Reveal.sync();
 })();
+
+// Several pop-up buttons on one point: the first opens with the point, each further
+// one becomes a click step of its own, right after the point.
+(function stepExtraButtons(){
+    if (!window.Reveal || !Reveal.isReady || !Reveal.isReady()) return setTimeout(stepExtraButtons, 30);
+    const slides = new Set();
+    document.querySelectorAll('.reveal .slides .fragment').forEach((point) => {
+        if (point.classList.contains('opens-modal')) return;
+        const own = Array.from(point.querySelectorAll('.opens-modal'))
+            .filter((b) => b.parentElement.closest('.fragment') === point);
+        own.slice(1).forEach((b) => {
+            if (b.classList.contains('fragment')) return;
+            b.classList.add('fragment');
+            slides.add(point.closest('section'));
+        });
+    });
+    // Reveal has already numbered the steps; renumber these slides in page order.
+    slides.forEach((s) => s.querySelectorAll('.fragment').forEach((f) => f.removeAttribute('data-fragment-index')));
+    if (slides.size) Reveal.sync();
+})();
 </script>
 <script>
 (function waitForReveal(){
@@ -18,7 +38,9 @@
             e.fragment.click();
             return;
         }
-        const trigger = e.fragment.querySelector && e.fragment.querySelector('.opens-modal');
+        // The point's own button only: not one inside a sub-point that has its own click.
+        const trigger = e.fragment.querySelectorAll && Array.from(e.fragment.querySelectorAll('.opens-modal'))
+            .find((b) => b.parentElement.closest('.fragment') === e.fragment);
         if (!trigger) return;
         if (trigger.classList.contains('fragment') && !trigger.classList.contains('current-fragment')) return;
         trigger.click();

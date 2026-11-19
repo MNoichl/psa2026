@@ -142,12 +142,12 @@ def capture(page, raster: bool) -> list[tuple[str, int, int, bytes]]:
     state, where a page is a one-page PDF (or a PNG with `raster`)."""
     states = []
 
-    def snap(kind: str) -> None:
+    def snap(kind: str, into: list | None = None) -> None:
         if raster:
             data = page.screenshot(type="png")
         else:
             data = page.pdf(width=f"{WIDTH}px", height=f"{HEIGHT}px", print_background=True, margin=NO_MARGIN)
-        states.append((kind, indices(page)[0], page.evaluate(POINTS_SHOWN), data))
+        (states if into is None else into).append((kind, indices(page)[0], page.evaluate(POINTS_SHOWN), data))
 
     snap("slide")
     while True:
@@ -163,13 +163,22 @@ def capture(page, raster: bool) -> list[tuple[str, int, int, bytes]]:
             if not wait_for(page, f"() => ({MODAL_STATE})() === 'ready'", 30):
                 print(f"warning: pop-up on slide {before[0] + 1} did not finish loading", file=sys.stderr)
             time.sleep(0.8)  # let embedded pages draw their charts
-            snap("popup")
+            popups = []
+            snap("popup", popups)
             for target in filter(None, (t.strip() for t in page.evaluate(POPUP_CLICKS).split("|"))):
                 if page.evaluate(CLICK_IN_POPUP, target):
                     time.sleep(0.8)
-                    snap("popup")
+                    snap("popup", popups)
                 else:
                     print(f"warning: nothing to click for '{target}' on slide {before[0] + 1}", file=sys.stderr)
+            # A point that carries a pop-up button opens the pop-up on the same click
+            # that shows the point, so the slide behind was never captured with it.
+            # Close the pop-up, capture the slide, and put that page before the pop-up.
+            page.evaluate("() => document.querySelector('.multimodal .mm-close')?.click()")
+            wait_for(page, f"() => ({MODAL_STATE})() === 'closed'", 10)
+            time.sleep(0.3)
+            snap("slide")
+            states.extend(popups)
             continue
         if indices(page) == before:
             break  # end of the deck
